@@ -17,7 +17,7 @@ library(data.table)
 
 ###  Step 1 ----
 
-# Read data into R and name files according to names from source
+# Read raw-data into R and name files according to names from source
 X_test <- read.table("./UCI HAR Dataset/test/X_test.txt") 
 # 2947 obs, 561 variables
 
@@ -36,7 +36,7 @@ y_train <- read.table("./UCI HAR Dataset/train/y_train.txt")
 subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt")
 # 7352 obs, 1 variable
 
-# r-bind "test" and "train" to one dataframe 
+# r-bind "X_test" and "X_train" to one dataframe 
 data <- rbind(X_test, X_train)
 # 10299 obs, 561 variables
 label <- rbind(y_test, y_train)
